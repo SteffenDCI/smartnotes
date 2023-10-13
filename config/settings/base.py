@@ -3,7 +3,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-
 # Application definition
 
 DEFAULT_APPS = [
@@ -13,10 +12,11 @@ DEFAULT_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+
+
 ]
 
-CUSTOM_APPS = []
+CUSTOM_APPS = ['home',]
 
 THIRD_PARTY_APPS = []
 
@@ -39,7 +39,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
